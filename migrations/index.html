@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electricity Bill Calculator DApp</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7fc;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            animation: fadeIn 1s ease;
+        }
+
+        h2 {
+            color: #2e3b4e;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="number"]:focus {
+            border-color: #4c7ef7;
+        }
+
+        button {
+            background-color: #4c7ef7;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.2s ease, background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #3b6ae3;
+            transform: scale(1.05);
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        h3 {
+            margin-top: 20px;
+            color: #2e3b4e;
+        }
+
+        #billDetails {
+            margin-top: 10px;
+            padding: 15px;
+            background-color: #f0f4f7;
+            border: 1px solid #e1e8f0;
+            border-radius: 5px;
+        }
+
+        /* Animation for fade-in effect */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Electricity Bill Calculator</h2>
+        <label for="prevReading">Previous Meter Reading:</label>
+        <input type="number" id="prevReading" placeholder="Enter previous reading"><br>
+        
+        <label for="currReading">Current Meter Reading:</label>
+        <input type="number" id="currReading" placeholder="Enter current reading"><br>
+
+        <button onclick="generateBill()">Generate Bill</button>
+        
+        <h3>Bill Details:</h3>
+        <div id="billDetails">Enter the readings and click "Generate Bill" to view the details.</div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js/dist/web3.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+
